@@ -6,13 +6,44 @@
         xmlns:local="clr-namespace:PlexShareApp"
         mc:Ignorable="d"
         WindowStartupLocation = "CenterScreen"
+        FontSize="14"
         Title="AuthenticationView" Height="700" Width="1100">
 
-    <Grid Background="Blue">
-        <Frame x:Name="AuthView" NavigationUIVisibility="Hidden" />
-        <StackPanel>
-            <Button Width="100" Click="Home_Click">Go To Home Page</Button>
-        </StackPanel>
-        
+    <Grid Background="Wheat">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="0.04*"/>
+            <ColumnDefinition Width="0.16*"/>
+            <ColumnDefinition Width="0.08*"/>
+            <ColumnDefinition Width="0.6*"/>
+            <ColumnDefinition Width="0.12*"/>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="0.05*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="0.06*"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="0.05*"/>
+            <!--<RowDefinition Height="3*"/>
+            <RowDefinition Height="15"/>-->
+
+            <RowDefinition Height="0.05*"/>
+
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="7" Grid.ColumnSpan="5" Background="White"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Name</TextBlock>
+        <TextBlock Name="NameBlock" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray">Please fill this information</TextBlock>
+        <TextBox Name="Name" Grid.Row="2" Grid.Column="4" Background="Transparent" TextChanged="NameTextChanged" TextAlignment="Center" Padding="5"></TextBox>
+
+        <TextBlock Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">Smail</TextBlock>
+        <TextBlock Name="SmailBlock" Grid.Row="4" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Gray">Please fill this information</TextBlock>
+        <TextBox Name="Smail" Grid.Row="4" Grid.Column="4" Background="Transparent" TextChanged="SmailTextChanged" TextAlignment="Center" Padding="5"></TextBox>
+
+        <Button Grid.Row="6" Grid.ColumnSpan="5" Grid.Column="1" Background="Wheat" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Click="Home_Click">Save</Button>
     </Grid>
+   
 </Window>
